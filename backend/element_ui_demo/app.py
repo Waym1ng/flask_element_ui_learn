@@ -60,7 +60,7 @@ def insert():
         u = User(
             name=name,
             sex=sex,
-            bir=datetime.strptime(bir[:10], '%Y-%m-%d'),
+            bir=datetime.strptime(bir, '%Y-%m-%d'),
             address=address
         )
         try:
@@ -80,7 +80,7 @@ def insert():
         user = User.query.get(id)
         user.name = name
         user.sex = sex
-        user.bir = datetime.strptime(bir[:10], '%Y-%m-%d')
+        user.bir = datetime.strptime(bir, '%Y-%m-%d')
         user.address = address
         try:
             db.session.commit()

@@ -7,7 +7,7 @@
       size="mini"
       >新增</el-button
     >
-    <el-table :data="tableData" stripe style="width: 100%; height: 250px">
+    <el-table :data="tableData" stripe style="width: 100%; height: 580px">
       <el-table-column label="编号" prop="id"></el-table-column>
       <el-table-column label="姓名" width="180">
         <template slot-scope="scope">
@@ -44,7 +44,7 @@
           layout="prev, pager, next, jumper, total, sizes"
           background
           :page-size="this.pageSize"
-          :page-sizes="[2, 4, 6, 8, 10]"
+          :page-sizes="[5, 10]"
           :total="this.total"
           @current-change="findPage"
           @size-change="findSize"
@@ -52,7 +52,7 @@
         </el-pagination
       ></el-col>
     </el-row>
-    <el-dialog :title="this.dlgTitle" :visible.sync="isShow">
+    <el-dialog :title="this.dlgTitle" :visible.sync="isShow" width="40%">
       <el-collapse-transition>
         <div v-show="isShow">
           <div class="transition-box">
@@ -70,6 +70,8 @@
                   type="date"
                   placeholder="选择日期"
                   v-model="form.bir"
+                  format="yyyy 年 MM 月 dd 日"
+                  value-format="yyyy-MM-dd"
                   style="width: 100%"
                 ></el-date-picker>
               </el-form-item>
@@ -103,7 +105,7 @@ export default {
       tableData: [],
       total: 0,
       pageNum: 1,
-      pageSize: 4,
+      pageSize: 5,
       isShow: false,
       dlgTitle: "用户",
       form: {
