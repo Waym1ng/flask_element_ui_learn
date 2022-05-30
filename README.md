@@ -7,4 +7,4 @@ Flask作为后端开发接口，使用了flask-sqlalchemy
 ORM对数据库快速查询，数据库用的是sqlite
 
 - backend 为后端目录
-- element 为前端目录
+- element_users 为前端目录
