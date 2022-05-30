@@ -33,8 +33,13 @@ def find_by_page():
     page_num = int(request.args.get("pageNum", 1))
     page_size = int(request.args.get("pageSize", 4))
     data = []
-    users = User.query.offset((page_num-1)*page_size).limit(page_size).all()
-    total = User.query.count()
+    # 分页1
+    # users = User.query.offset((page_num-1)*page_size).limit(page_size).all()
+    # total = User.query.count()
+    # 分页2
+    pagination = User.query.paginate(page=page_num, per_page=page_size, error_out=False)
+    users = pagination.items
+    total = pagination.total
     for user in users:
         user_dict = user.to_dict()
         user_dict["bir"] = datetime.strftime(user_dict["bir"], '%Y-%m-%d')
