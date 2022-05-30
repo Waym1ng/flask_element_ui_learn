@@ -3,7 +3,7 @@
     <el-carousel indicator-position="outside">
       <el-carousel-item v-for="item in iamges" :key="item.index">
         <el-image
-          style="width: 1100px"
+          style="width: 100%"
           :src="item.img"
           fit="fill"
         ></el-image>
