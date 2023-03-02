@@ -1,16 +1,17 @@
-# element UI 入门级教程
+# Element UI 入门级教程
 
-具体组件可参考官网 [element UI](https://element.eleme.cn/#/zh-CN/component/installation)
+本教程旨在帮助Python后端开发人员快速学习使用Element UI组件。
 
-## 主要是让python后端更快速学习element UI
+具体组件可参考 [Element UI 官网](https://element.eleme.cn/#/zh-CN/component/installation)。
 
-Flask作为后端开发接口，使用了flask-sqlalchemy
+## 技术栈
 
-ORM对数据库快速查询，数据库用的是sqlite
+- Flask：后端开发接口
+- Flask-SQLAlchemy：ORM工具，用于快速查询数据库
+- SQLite：数据库
 
-- backend 为后端目录
-  [flask-sqlalchemy参考](http://www.jiege.tech/extensions/flask-sqlalchemy.html)
-  
-- element_users 为前端目录
-  主要代码在/element_users/src/components/user/中
+## 项目结构
+
+- backend：后端代码目录 参考链接：[flask-sqlalchemy文档](http://www.jiege.tech/extensions/flask-sqlalchemy.html)
+- element_users：前端代码目录 主要代码位于 `/element_users/src/components/user/` 目录下。
 
